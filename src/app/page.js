@@ -38,17 +38,9 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             
-              href="/visagismo"
-              className="bg-white text-black px-8 py-4 text-sm tracking-[0.1em] uppercase font-semibold hover:bg-zinc-200 transition-colors"
-            >
-              Analizar mi rostro
-            </a>
+          <a href="/visagismo" className="bg-white text-black px-8 py-4 text-sm tracking-[0.1em] uppercase font-semibold hover:bg-zinc-200 transition-colors">Analizar mi rostro</a>
             
-              href="/catalogo"
-              className="border border-zinc-700 px-8 py-4 text-sm tracking-[0.1em] uppercase text-zinc-300 hover:border-zinc-400 hover:text-white transition-colors"
-            >
-              Ver catálogo
-            </a>
+          <a href="/catalogo" className="border border-zinc-700 px-8 py-4 text-sm tracking-[0.1em] uppercase text-zinc-300 hover:border-zinc-400 hover:text-white transition-colors">Ver catálogo</a>
           </div>
         </div>
         <div className="absolute bottom-10 z-20 flex flex-col items-center gap-2 text-zinc-600 text-xs tracking-widest uppercase">
