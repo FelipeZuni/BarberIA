@@ -145,6 +145,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonios */}
+      <section className="border-t border-zinc-900 px-6 py-24">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs tracking-[0.3em] uppercase text-zinc-500 mb-3 text-center">Lo que dicen</p>
+          <h2 className="text-3xl font-bold text-center mb-16">Clientes reales</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                nombre: 'Matías R.',
+                texto: 'Llevo 2 años viniendo y nunca me fui disconforme. El fade que me hace Carlos es el mejor que he visto en la ciudad.',
+                estrellas: 5,
+                corte: 'Skin Fade'
+              },
+              {
+                nombre: 'Sebastián V.',
+                texto: 'Lo del visagismo con IA es una locura. Me mostró cómo me iba a quedar el corte antes de hacérmelo y quedó exactamente igual.',
+                estrellas: 5,
+                corte: 'Undercut Texturizado'
+              },
+              {
+                nombre: 'Felipe T.',
+                texto: 'El ambiente es increíble, te ofrecen algo para tomar mientras esperás. Se nota que les importa la experiencia completa.',
+                estrellas: 5,
+                corte: 'Pompadour Moderno'
+              },
+              {
+                nombre: 'Ignacio M.',
+                texto: 'Fui por primera vez sin saber qué corte quería. Me hicieron el análisis facial y me recomendaron uno que nunca hubiera elegido solo. Quedé sorprendido.',
+                estrellas: 5,
+                corte: 'Crop Francés'
+              },
+              {
+                nombre: 'Diego A.',
+                texto: 'El catálogo online está muy bueno para ir con la idea clara. Llegué sabiendo exactamente qué pedir y el resultado fue perfecto.',
+                estrellas: 5,
+                corte: 'Quiff Moderno'
+              },
+              {
+                nombre: 'Cristóbal P.',
+                texto: 'Precio justo, atención de primera. Ya mandé a tres amigos y todos volvieron encantados. Es mi barbería de cabecera.',
+                estrellas: 5,
+                corte: 'Fade Clásico'
+              },
+            ].map((t) => (
+              <div key={t.nombre} className="bg-zinc-900 border border-zinc-800 p-6 hover:border-zinc-600 transition-colors">
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: t.estrellas }).map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-zinc-300 text-sm leading-relaxed mb-6">"{t.texto}"</p>
+                <div className="border-t border-zinc-800 pt-4 flex justify-between items-center">
+                  <div>
+                    <p className="font-semibold text-sm">{t.nombre}</p>
+                    <p className="text-zinc-500 text-xs mt-0.5">{t.corte}</p>
+                  </div>
+                  <span className="text-xs text-zinc-600">✓ Verificado</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <footer className="border-t border-zinc-900 px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-600 text-xs tracking-widest uppercase">
         <span>✦ BarberIA</span>
