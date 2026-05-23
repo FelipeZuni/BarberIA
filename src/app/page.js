@@ -208,6 +208,136 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Equipo */}
+      <section className="border-t border-zinc-900 px-6 py-24">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs tracking-[0.3em] uppercase text-zinc-500 mb-3 text-center">Las manos detrás del corte</p>
+          <h2 className="text-3xl font-bold text-center mb-16">Nuestro equipo</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                nombre: 'Carlos M.',
+                rol: 'Master Barber',
+                especialidad: 'Skin fade · Degradados',
+                experiencia: '8 años',
+                foto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+                descripcion: 'Especialista en fades y degradados. Formado en Nueva York, lleva 8 años perfeccionando su técnica.'
+              },
+              {
+                nombre: 'Diego R.',
+                rol: 'Senior Barber',
+                especialidad: 'Cortes clásicos · Afeitado',
+                experiencia: '6 años',
+                foto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400',
+                descripcion: 'Experto en cortes clásicos y afeitado tradicional con navaja. Su atención al detalle es inigualable.'
+              },
+              {
+                nombre: 'Martín P.',
+                rol: 'Barber',
+                especialidad: 'Texturizados · Barba',
+                experiencia: '4 años',
+                foto: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
+                descripcion: 'Especialista en cortes texturizados modernos y diseño de barba. Siempre al día con las últimas tendencias.'
+              },
+            ].map((b) => (
+              <div key={b.nombre} className="group">
+                <div className="overflow-hidden mb-5">
+                  <img
+                    src={b.foto}
+                    alt={b.nombre}
+                    className="w-full h-72 object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="border-l-2 border-zinc-700 pl-4">
+                  <p className="font-bold text-lg">{b.nombre}</p>
+                  <p className="text-zinc-400 text-sm mb-1">{b.rol} · {b.experiencia}</p>
+                  <p className="text-zinc-500 text-xs tracking-wider uppercase mb-3">{b.especialidad}</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">{b.descripcion}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ubicación y Horarios */}
+      <section className="border-t border-zinc-900 px-6 py-24">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+
+          <div>
+            <p className="text-xs tracking-[0.3em] uppercase text-zinc-500 mb-3">Encontranos</p>
+            <h2 className="text-3xl font-bold mb-8">Ubicación</h2>
+
+            {/* Mapa embebido */}
+            <div className="w-full h-64 bg-zinc-900 border border-zinc-800 overflow-hidden mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.0!2d-73.0!3d-36.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQ5JzEyLjAiUyA3M8KwMDAnMDAuMCJX!5e0!3m2!1ses!2scl!4v1620000000000!5m2!1ses!2scl"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex gap-3 items-start">
+                <span className="text-zinc-500 mt-0.5">📍</span>
+                <div>
+                  <p className="text-sm font-medium">Dirección</p>
+                  <p className="text-zinc-400 text-sm">Av. Principal 1234, Concepción, Chile</p>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start">
+                <span className="text-zinc-500 mt-0.5">📞</span>
+                <div>
+                  <p className="text-sm font-medium">Teléfono</p>
+                  <p className="text-zinc-400 text-sm">+56 9 1234 5678</p>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start">
+                <span className="text-zinc-500 mt-0.5">📧</span>
+                <div>
+                  <p className="text-sm font-medium">Email</p>
+                  <p className="text-zinc-400 text-sm">contacto@barberia.cl</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs tracking-[0.3em] uppercase text-zinc-500 mb-3">Cuándo atendemos</p>
+            <h2 className="text-3xl font-bold mb-8">Horarios</h2>
+            <div className="space-y-px">
+              {[
+                { dia: 'Lunes', horario: '09:00 — 20:00', abierto: true },
+                { dia: 'Martes', horario: '09:00 — 20:00', abierto: true },
+                { dia: 'Miércoles', horario: '09:00 — 20:00', abierto: true },
+                { dia: 'Jueves', horario: '09:00 — 21:00', abierto: true },
+                { dia: 'Viernes', horario: '09:00 — 21:00', abierto: true },
+                { dia: 'Sábado', horario: '10:00 — 19:00', abierto: true },
+                { dia: 'Domingo', horario: 'Cerrado', abierto: false },
+              ].map((h) => (
+                <div key={h.dia} className="flex justify-between items-center py-3 border-b border-zinc-900">
+                  <span className={`text-sm ${h.abierto ? 'text-zinc-300' : 'text-zinc-600'}`}>{h.dia}</span>
+                  <span className={`text-sm font-mono ${h.abierto ? 'text-zinc-400' : 'text-zinc-700'}`}>{h.horario}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 bg-zinc-900 border border-zinc-800 p-5">
+              <p className="text-sm font-semibold mb-1">¿Querés reservar?</p>
+              <p className="text-zinc-400 text-sm mb-4">Escribinos por WhatsApp o Instagram y te confirmamos tu turno.</p>
+              <div className="flex gap-3">
+                <a href="https://wa.me/56912345678" className="text-xs tracking-widest uppercase border border-zinc-700 px-4 py-2 hover:border-zinc-500 hover:text-white transition-colors text-zinc-400">WhatsApp</a>
+                <a href="https://instagram.com" className="text-xs tracking-widest uppercase border border-zinc-700 px-4 py-2 hover:border-zinc-500 hover:text-white transition-colors text-zinc-400">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
       {/* Footer */}
       <footer className="border-t border-zinc-900 px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-600 text-xs tracking-widest uppercase">
         <span>✦ BarberIA</span>
