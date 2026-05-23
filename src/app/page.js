@@ -112,11 +112,7 @@ export default function Home() {
             con cada corte antes de tomar la decisión.
           </p>
           
-            href="/visagismo"
-            className="inline-block bg-white text-black px-10 py-4 text-sm tracking-[0.15em] uppercase font-semibold hover:bg-zinc-200 transition-colors"
-          >
-            Probar visagismo IA →
-          </a>
+          <a href="/visagismo" className="inline-block bg-white text-black px-10 py-4 text-sm tracking-[0.15em] uppercase font-semibold hover:bg-zinc-200 transition-colors">Probar visagismo IA →</a>
         </div>
       </section>
 
