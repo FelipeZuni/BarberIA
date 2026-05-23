@@ -12,11 +12,7 @@ export default function Home() {
           <a href="/precios" className="hover:text-white transition-colors">Precios</a>
         </div>
         
-          href="/visagismo"
-          className="text-xs tracking-[0.15em] uppercase bg-white text-black px-5 py-2 hover:bg-zinc-200 transition-colors"
-        >
-          Probar IA
-        </a>
+        <a href="/visagismo" className="text-xs tracking-[0.15em] uppercase bg-white text-black px-5 py-2 hover:bg-zinc-200 transition-colors">Probar IA</a>
       </nav>
 
       {/* Hero */}
